@@ -6,7 +6,7 @@ public class DigiSchoolServiceImpl implements IDigiSchoolService {
 
 	@Override
 	public String getStudent() {
-		String a = "Sunny+Atasi";
+		String a = "Sudeep";
 		return a;
 	}
 
