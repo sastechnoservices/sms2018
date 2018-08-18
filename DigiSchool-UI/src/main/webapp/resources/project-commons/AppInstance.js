@@ -1,1 +1,0 @@
-var DigiSchoolApp = angular.module('DigiSchoolApp',[]);
