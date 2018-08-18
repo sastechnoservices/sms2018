@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="DigiSchoolApp" ng-controller="MainController">
 <head>
 <meta charset="ISO-8859-1">
-<title>DigiSchool</title>
+<title>{{appTitle}}</title>
 </head>
-<body ng-app="DigiSchoolApp">
+<body>
+<!-- Angular Library Imports -->
+<script src="resources/angular/angular.min.js"></script>
+<script src="resources/angular/angular-route.min.js"></script>
+
+<!-- Application resource imports -->
+<script src="resources/customs/AppInstance.js"></script>
+<script src="resources/customs/Controllers.js"></script>
+<script src="resources/customs/ApplicationUrl.js"></script>
+<script src="resources/customs/router.js"></script>
+
+<!-- Apllication Controller imports -->
+<script src="modules/main/controller/MainController.js"></script>
+<script src="modules/login/controller/LoginController.js"></script>
+
+<div ng-view></div>
 
 </body>
 </html>
