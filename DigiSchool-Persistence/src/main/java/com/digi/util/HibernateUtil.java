@@ -1,0 +1,41 @@
+package com.digi.util;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class HibernateUtil {
+	private static SessionFactory sessionFactory;
+	
+	private HibernateUtil() {
+		
+	}
+
+	/*public static SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}*/
+
+	public static void setSessionFactory(SessionFactory sessionFactory) {
+		HibernateUtil.sessionFactory = sessionFactory;
+	}
+    
+    /*static{
+        try {
+            sessionFactory = new Configuration().configure().buildSessionFactory();
+        } catch (Throwable e) {
+            throw new ExceptionInInitializerError(e);
+        }
+    }
+ 
+    public static SessionFactory getSessionFactory(){
+        return sessionFactory;
+    }
+     
+    public static void shutDown(){
+        //closes caches and connections
+        getSessionFactory().close();
+    }*/
+public static Session getCurrentSession() {
+	return sessionFactory.getCurrentSession();
+}
+}
