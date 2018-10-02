@@ -1,4 +1,4 @@
-package com.digi.main;
+/*package com.digi.main;
 
 import java.util.Date;
 
@@ -10,7 +10,7 @@ import com.digi.util.HibernateUtil;
 public class App {
 	public static void main(String[] args) {
 		System.out.println("Maven + Hibernate Annotation + Oracle");
-		Session session = HibernateUtil.getSessionFactory().openSession();
+		Session session = HibernateUtil.getCurrentSession();
 
 		session.beginTransaction();
 		StudentDemo user = new StudentDemo();
@@ -23,3 +23,4 @@ public class App {
 		session.getTransaction().commit();
 	}
 }
+*/

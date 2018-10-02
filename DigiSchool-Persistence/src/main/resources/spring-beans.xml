@@ -9,6 +9,7 @@
     <property name="sessionFactory" ref="sessionFactory"></property>
     </bean> -->
     
-    <bean id="studentDaoImpl" class="com.digi.daoimpl.StudentDaoImpl">
-    </bean>
+    <!-- <bean id="studentDaoImpl" class="com.digi.daoimpl.StudentDaoImpl">
+    </bean> -->
+    <bean id="schoolDaoImpl" class="com.digi.daoimpl.SchoolDaoImpl"></bean>
    </beans>

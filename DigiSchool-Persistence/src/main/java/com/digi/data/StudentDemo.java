@@ -1,4 +1,4 @@
-package com.digi.data;
+/*package com.digi.data;
 
 import java.io.Serializable;
 
@@ -51,3 +51,4 @@ public class StudentDemo implements java.io.Serializable{
 	
 
 }
+*/
