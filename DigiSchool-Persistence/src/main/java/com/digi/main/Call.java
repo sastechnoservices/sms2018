@@ -9,6 +9,8 @@ import com.digi.dao.SchoolDao;
 import com.digi.data.School;
 
 public class Call {
+	
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		System.out.println("beginssss");
 		ApplicationContext con = new ClassPathXmlApplicationContext("spring-beans.xml","arts-spring-hibernate.xml");

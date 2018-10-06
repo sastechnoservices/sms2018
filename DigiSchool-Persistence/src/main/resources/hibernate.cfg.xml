@@ -4,6 +4,11 @@
         "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <mapping resource="hbm/school.hbm.xml"></mapping>
+        <mapping resource="hbm/School.hbm.xml"></mapping>
+        <mapping resource="hbm/Employee.hbm.xml"></mapping>
+        <mapping resource="hbm/Parent.hbm.xml"></mapping>
+        <mapping resource="hbm/SchoolClass.hbm.xml"></mapping>
+        <mapping resource="hbm/Student.hbm.xml"></mapping>
+        <mapping resource="hbm/Subject.hbm.xml"></mapping>
     </session-factory>
 </hibernate-configuration>

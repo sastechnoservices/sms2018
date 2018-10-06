@@ -1,29 +1,28 @@
 package com.digi.data;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @SuppressWarnings("serial")
-public class Student implements java.io.Serializable {
-	
-	private String studentId;
+public class Employee implements Serializable{
+
+	private String employeeId;
 	private School school;
-	private Parent parent;
+	private String type;
 	private String name;
 	private String MobNo;
 	private String mailId;
 	private String xml;
-	private String classSection;
-	private String status;
-	private String lstOfSubj;
 	private Date createdOn;
 	private Date modifiedOn;
 	private String modifiedBy;
 	private String imageId;
-	public String getStudentId() {
-		return studentId;
+	private String lstOfSubj;
+	public String getEmployeeId() {
+		return employeeId;
 	}
-	public void setStudentId(String studentId) {
-		this.studentId = studentId;
+	public void setEmployeeId(String employeeId) {
+		this.employeeId = employeeId;
 	}
 	public School getSchool() {
 		return school;
@@ -31,11 +30,11 @@ public class Student implements java.io.Serializable {
 	public void setSchool(School school) {
 		this.school = school;
 	}
-	public Parent getParent() {
-		return parent;
+	public String getType() {
+		return type;
 	}
-	public void setParent(Parent parent) {
-		this.parent = parent;
+	public void setType(String type) {
+		this.type = type;
 	}
 	public String getName() {
 		return name;
@@ -55,17 +54,11 @@ public class Student implements java.io.Serializable {
 	public void setMailId(String mailId) {
 		this.mailId = mailId;
 	}
-	public String getClassSection() {
-		return classSection;
+	public String getXml() {
+		return xml;
 	}
-	public void setClassSection(String classSection) {
-		this.classSection = classSection;
-	}
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
+	public void setXml(String xml) {
+		this.xml = xml;
 	}
 	public Date getCreatedOn() {
 		return createdOn;
@@ -85,12 +78,6 @@ public class Student implements java.io.Serializable {
 	public void setModifiedBy(String modifiedBy) {
 		this.modifiedBy = modifiedBy;
 	}
-	public String getXml() {
-		return xml;
-	}
-	public void setXml(String xml) {
-		this.xml = xml;
-	}
 	public String getImageId() {
 		return imageId;
 	}
@@ -103,6 +90,4 @@ public class Student implements java.io.Serializable {
 	public void setLstOfSubj(String lstOfSubj) {
 		this.lstOfSubj = lstOfSubj;
 	}
-	
-	
 }

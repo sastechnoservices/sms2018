@@ -15,4 +15,10 @@ public class GenericDAOImpl<T extends Serializable,M extends Serializable> imple
 		
 	}
 
+	@Override
+	public Serializable getById(String id) {
+		Serializable obj = (Serializable)sessionFactory.getCurrentSession().get(Serializable.class, id);
+		return obj;
+	}
+
 }

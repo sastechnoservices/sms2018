@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="com.digi.data.Parent" table="dgs_prnt">
+  	<id name="parentId" type="string">
+  		<column name="prnt_id" />
+  		<generator class="assigned"></generator>
+  	</id>
+  	<many-to-one name="school" class="com.digi.data.School">
+  		<column name="schl_id"/>
+  	</many-to-one>
+  	<property name="name" type="string">
+  		<column name="prnt_nm" />
+  	</property>
+  	<property name="MobNo" type="string">
+  		<column name="prnt_mob_no" />
+  	</property>
+  	<property name="mailId" type="string">
+  		<column name="prnt_mail_id" />
+  	</property>
+  	<property name="xml" type="string">
+  		<column name="prnt_xml" />
+  	</property>
+  	<property name="createdOn" type="java.util.Date">
+  		<column name="prnt_crt_on" />
+  	</property>
+  	<property name="modifiedOn" type="java.util.Date">
+  		<column name="prnt_mod_on" />
+  	</property>
+  	<property name="modifiedBy" type="string">
+  		<column name="prnt_mod_by" />
+  	</property>
+  	<property name="imageId" type="string">
+  		<column name="prnt_img_id" />
+  	</property>
+  </class>  
+ </hibernate-mapping>

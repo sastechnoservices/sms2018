@@ -3,39 +3,29 @@ package com.digi.data;
 import java.util.Date;
 
 @SuppressWarnings("serial")
-public class Student implements java.io.Serializable {
-	
-	private String studentId;
+public class Parent implements java.io.Serializable{
+
+	private String parentId;
 	private School school;
-	private Parent parent;
 	private String name;
 	private String MobNo;
 	private String mailId;
 	private String xml;
-	private String classSection;
-	private String status;
-	private String lstOfSubj;
 	private Date createdOn;
 	private Date modifiedOn;
 	private String modifiedBy;
 	private String imageId;
-	public String getStudentId() {
-		return studentId;
+	public String getParentId() {
+		return parentId;
 	}
-	public void setStudentId(String studentId) {
-		this.studentId = studentId;
+	public void setParentId(String parentId) {
+		this.parentId = parentId;
 	}
 	public School getSchool() {
 		return school;
 	}
 	public void setSchool(School school) {
 		this.school = school;
-	}
-	public Parent getParent() {
-		return parent;
-	}
-	public void setParent(Parent parent) {
-		this.parent = parent;
 	}
 	public String getName() {
 		return name;
@@ -55,17 +45,11 @@ public class Student implements java.io.Serializable {
 	public void setMailId(String mailId) {
 		this.mailId = mailId;
 	}
-	public String getClassSection() {
-		return classSection;
+	public String getXml() {
+		return xml;
 	}
-	public void setClassSection(String classSection) {
-		this.classSection = classSection;
-	}
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
+	public void setXml(String xml) {
+		this.xml = xml;
 	}
 	public Date getCreatedOn() {
 		return createdOn;
@@ -85,23 +69,11 @@ public class Student implements java.io.Serializable {
 	public void setModifiedBy(String modifiedBy) {
 		this.modifiedBy = modifiedBy;
 	}
-	public String getXml() {
-		return xml;
-	}
-	public void setXml(String xml) {
-		this.xml = xml;
-	}
 	public String getImageId() {
 		return imageId;
 	}
 	public void setImageId(String imageId) {
 		this.imageId = imageId;
-	}
-	public String getLstOfSubj() {
-		return lstOfSubj;
-	}
-	public void setLstOfSubj(String lstOfSubj) {
-		this.lstOfSubj = lstOfSubj;
 	}
 	
 	

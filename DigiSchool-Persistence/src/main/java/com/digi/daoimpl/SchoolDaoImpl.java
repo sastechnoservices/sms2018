@@ -16,17 +16,14 @@ public class SchoolDaoImpl implements SchoolDao {
 	@Transactional("transactionManager")
 	public void save(School obj) {
 		session = HibernateUtil.getCurrentSession();
-		if(session.isOpen()) {
-			session.close();
-		}
-		trans = session.beginTransaction();
-		/*if(session.getTransaction() == null){
-			
-		}else {
-			trans = session.getTransaction();
-		}*/
+		trans = session.getTransaction();
+		trans.begin();
 		session.save(obj);
 		trans.commit();
-		session.close();
+	}
+
+	@Override
+	public School getById(String id) {
+		return (School)HibernateUtil.getCurrentSession().get(School.class, id);
 	}
 }

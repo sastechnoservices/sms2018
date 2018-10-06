@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 6 Oct, 2018 12:34:40 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.digi.data.Subject" table="SUBJECT">
+        <id name="subjectId" type="java.lang.String">
+            <column name="subj_id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="school" class="com.digi.data.School" fetch="join">
+            <column name="schl_id" />
+        </many-to-one>
+        <property name="type" type="java.lang.String">
+            <column name="subj_type" />
+        </property>
+        <property name="description" type="java.lang.String">
+            <column name="subj_desc" />
+        </property>
+        <property name="status" type="java.lang.String">
+            <column name="subj_st" />
+        </property>
+        <property name="createdOn" type="java.util.Date">
+            <column name="subj_crt_on" />
+        </property>
+        <property name="modifiedOn" type="java.util.Date">
+            <column name="subj_mod_on" />
+        </property>
+        <property name="modifiedBy" type="java.lang.String">
+            <column name="subj_mod_by" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="com.digi.data.SchoolClass" table="dgs_class">
+  	<id name="classId" type="string">
+  		<column name="class_id" />
+  		<generator class="assigned"></generator>
+  	</id>
+  	<many-to-one name="school" class="com.digi.data.School">
+  		<column name="schl_id"/>
+  	</many-to-one>
+  	<property name="trend" type="string">
+  		<column name="class_trd" />
+  	</property>
+  	<property name="lstOfCmpSubj" type="string">
+  		<column name="class_lst_cmp_subj" />
+  	</property>
+  	<property name="lstOfOptSubj" type="string">
+  		<column name="class_lst_opt_subj" />
+  	</property>
+  </class>  
+ </hibernate-mapping>

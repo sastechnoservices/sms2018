@@ -3,6 +3,7 @@ package com.digi.data;
 import java.io.Serializable;
 import java.util.Date;
 
+@SuppressWarnings("serial")
 public class School implements Serializable {
 	
 	private String schoolId;

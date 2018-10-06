@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="com.digi.data.Student" table="dgs_std">
+  	<id name="studentId" type="string">
+  		<column name="std_id" />
+  		<generator class="assigned"></generator>
+  	</id>
+  	<many-to-one name="school" class="com.digi.data.School">
+  		<column name="schl_id"/>
+  	</many-to-one>
+  	<many-to-one name="parent" class="com.digi.data.Parent">
+  		<column name="prnt_id"/>
+  	</many-to-one>
+  	<property name="name" type="string">
+  		<column name="std_nm" />
+  	</property>
+  	<property name="MobNo" type="string">
+  		<column name="std_mob_no" />
+  	</property>
+  	<property name="mailId" type="string">
+  		<column name="std_mail_id" />
+  	</property>
+  	<property name="xml" type="string">
+  		<column name="std_xml" />
+  	</property>
+  	<property name="createdOn" type="java.util.Date">
+  		<column name="std_crt_on" />
+  	</property>
+  	<property name="modifiedOn" type="java.util.Date">
+  		<column name="std_mod_on" />
+  	</property>
+  	<property name="modifiedBy" type="string">
+  		<column name="std_mod_by" />
+  	</property>
+  	<property name="imageId" type="string">
+  		<column name="std_img_id" />
+  	</property>
+  	<property name="classSection" type="string">
+  		<column name="std_class_sec" />
+  	</property>
+  	<property name="status" type="string">
+  		<column name="std_status" />
+  	</property>
+  	<property name="lstOfSubj" type="string">
+  		<column name="std_lst_subj" />
+  	</property>
+  </class>  
+ </hibernate-mapping>
